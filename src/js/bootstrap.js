@@ -8,14 +8,6 @@ export const Bootstrap = {
         this.create();
     },
 
-    hide: function() {
-        this.cEnv && console.log('Bootstrap.hide()');
-    },
-
-    show: function() {
-        this.cEnv && console.log('Bootstrap.show()');
-    },
-
     create: function() {
         this.cEnv && console.log('Bootstrap.create()');
         this.hide();
@@ -23,5 +15,23 @@ export const Bootstrap = {
         // here you can add more initialization logic
 
         this.show();
+    },
+
+    hide: function() {
+        this.cEnv && console.log('Bootstrap.hide()');
+
+        const content = document.getElementById('content');
+        if (content) {
+            content.style.display = 'none';
+        }  
+    },
+
+    show: function() {
+        this.cEnv && console.log('Bootstrap.show()');
+
+        const content = document.getElementById('content');
+        if (content) {
+            content.style.display = 'inline';
+        }  
     }
 };

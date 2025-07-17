@@ -6,16 +6,8 @@ export default defineConfig([
 	{
 		files: ["**/*.js"],
 		rules: {
+			"no-console": "off", // allow console.log
 			semi: "error",
-		},
-	},
-
-	// matches all files ending with .js except those in __tests
-	{
-		files: ["**/*.js"],
-		ignores: ["__tests/**"],
-		rules: {
-			"no-console": "error",
 		},
 	},
 ]);

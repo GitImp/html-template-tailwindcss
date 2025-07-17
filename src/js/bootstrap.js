@@ -5,9 +5,6 @@ export const Bootstrap = {
 
     init: function() {
         this.cEnv && console.log('Bootstrap initialized');
-
-        this.hide();
-        this.show();
         this.create();
     },
 
@@ -21,5 +18,10 @@ export const Bootstrap = {
 
     create: function() {
         this.cEnv && console.log('Bootstrap.create()');
+        this.hide();
+
+        // here you can add more initialization logic
+
+        this.show();
     }
 };

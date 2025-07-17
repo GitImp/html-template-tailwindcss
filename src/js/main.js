@@ -5,11 +5,6 @@ import { Bootstrap } from './bootstrap.min.js';
 import { fetchData, apiKey, config } from './module.min.js';
 
 function ready() {
-    console.log('\nenv.js output');
-    console.log(ENV.debug);
-    console.log(ENV.timeout);
-
-    console.log('\nbootstrap.js output');
     Bootstrap.init();
     
     console.log('\nmodule.js output');

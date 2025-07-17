@@ -10,7 +10,9 @@
     "build-css-min": "npx @tailwindcss/cli -i src/css/styles.css -o public/css/styles.min.css --minify",
     "build-css-min-watch": "npx @tailwindcss/cli -i src/css/styles.css -o public/css/styles.min.css --minify --watch",
     "build-js": "npx cpx src/js/main.js public/js",
-    "build-js-min": "npx terser src/js/main.js --compress --mangle toplevel --source-map --output public/js/main.min.js",
+    "build-js-min": "npm run build-main-js-min && npm run build-modules-js-min",
+    "build-main-js-min": "npx terser src/js/main.js --compress --mangle toplevel --source-map --output public/js/main.min.js & npx terser src/js/module.js --compress --mangle toplevel --source-map --output public/js/module.js",
+    "build-modules-js-min": "npx terser src/js/module.js --compress --mangle toplevel --source-map --output public/js/module.js",
     "start-server": "http-server public --port 5500",
     "tailwind-config": "tailwindcss init",
     "tailwind-full-config": "tailwindcss init --full"

@@ -1,7 +1,7 @@
 {
-  "name": "swa_fahrplan",
+  "name": "html-template-tailwindcss",
   "version": "1.0.0",
-  "description": "swa Fahrplanauskunft",
+  "description": "HTML Template with Tailwind CSS",
   "author": "Andreas Linder",
   "license": "UNLICENSED",
   "scripts": {

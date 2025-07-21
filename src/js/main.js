@@ -10,6 +10,7 @@ function ready() {
     console.log('\nmodule.js output');
     console.log(apiKey);
     console.log(fetchData());
+    console.log(config_module.getPrivateVariable());
 
     const env = createEnvManager('dev');
     console.log('\nconfig dev output');

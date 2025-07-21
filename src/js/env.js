@@ -3,7 +3,7 @@
  * @param {string} [initialEnv='dev'] - Die Startumgebung (z.B. 'dev' oder 'prd').
  * @returns {object} API zum Verwalten und Abfragen von Umgebungswerten.
  */
-export function createEnvManager(initialEnv = 'dev') {
+export function createEnvManager(initialEnv = 'prd') {
     const configs = {
         dev: { 
             debug: true,

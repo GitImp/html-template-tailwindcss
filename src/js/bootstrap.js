@@ -4,14 +4,14 @@ export const Bootstrap = {
     env: createEnvManager('dev'),
 
     init: function() {
-        this.cenv = this.env.getEnvValue('debug'); // cenv is current environment debug value
+        this.cdbg = this.env.getEnvValue('debug'); // cdbg is current environment debug value
 
-        this.cenv && console.log('Bootstrap initialized');
+        this.cdbg && console.log('Bootstrap initialized');
         this.create();
     },
 
     create: function() {
-        this.cenv && console.log('Bootstrap.create()');
+        this.cdbg && console.log('Bootstrap.create()');
         this.hide();
 
         // here you can add more initialization logic
@@ -20,7 +20,7 @@ export const Bootstrap = {
     },
 
     hide: function() {
-        this.cenv && console.log('Bootstrap.hide()');
+        this.cdbg && console.log('Bootstrap.hide()');
 
         const content = document.getElementById('content');
         if (content) {
@@ -29,7 +29,7 @@ export const Bootstrap = {
     },
 
     show: function() {
-        this.cenv && console.log('Bootstrap.show()');
+        this.cdbg && console.log('Bootstrap.show()');
 
         const content = document.getElementById('content');
         if (content) {

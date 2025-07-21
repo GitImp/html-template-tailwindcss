@@ -5,7 +5,7 @@ export function fetchData() {
 }
 
 let privateVariable = 'This is private';
-const config = {
+const config_module = {
     timeout: 5000,
 
     getPrivateVariable: function() {
@@ -13,4 +13,4 @@ const config = {
     }
 };
 
-export {config}; // Named export
+export {config_module}; // Named export

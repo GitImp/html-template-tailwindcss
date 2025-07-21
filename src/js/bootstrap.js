@@ -1,7 +1,7 @@
-import { ENV } from './env.min.js';
+import { getEnvValue } from './env.min.js';
 
 export const Bootstrap = {
-    cEnv: ENV.getEnvValue('debug'), // Current environment debug mode
+    cEnv: getEnvValue('debug'), // Current environment debug mode
 
     init: function() {
         this.cEnv && console.log('Bootstrap initialized');

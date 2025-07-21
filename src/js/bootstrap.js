@@ -1,15 +1,17 @@
-import { getEnvValue } from './env.min.js';
+import { createEnvManager } from './env.min.js';
 
 export const Bootstrap = {
-    cEnv: getEnvValue('debug'), // Current environment debug mode
+    env: createEnvManager('dev'),
 
     init: function() {
-        this.cEnv && console.log('Bootstrap initialized');
+        this.cenv = this.env.getEnvValue('debug'); // cenv is current environment debug value
+
+        this.cenv && console.log('Bootstrap initialized');
         this.create();
     },
 
     create: function() {
-        this.cEnv && console.log('Bootstrap.create()');
+        this.cenv && console.log('Bootstrap.create()');
         this.hide();
 
         // here you can add more initialization logic
@@ -18,7 +20,7 @@ export const Bootstrap = {
     },
 
     hide: function() {
-        this.cEnv && console.log('Bootstrap.hide()');
+        this.cenv && console.log('Bootstrap.hide()');
 
         const content = document.getElementById('content');
         if (content) {
@@ -27,7 +29,7 @@ export const Bootstrap = {
     },
 
     show: function() {
-        this.cEnv && console.log('Bootstrap.show()');
+        this.cenv && console.log('Bootstrap.show()');
 
         const content = document.getElementById('content');
         if (content) {

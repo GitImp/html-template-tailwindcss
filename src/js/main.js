@@ -1,6 +1,6 @@
 'use strict';
 
-import { getEnvValue, setEnv } from './env.min.js';
+import { createEnvManager } from './env.min.js';
 import { Bootstrap } from './bootstrap.min.js';
 import { fetchData, apiKey, config_module } from './module.min.js';
 
@@ -11,14 +11,15 @@ function ready() {
     console.log(apiKey);
     console.log(fetchData());
 
+    const env = createEnvManager('dev');
     console.log('\nconfig dev output');
-    console.log(getEnvValue('debug'));
-    console.log(getEnvValue('timeout'));
+    console.log(env.getEnvValue('debug'));
+    console.log(env.getEnvValue('timeout'));
 
-    setEnv('prd');
+    env.setEnv('prd');
     console.log('\nconfig prd output');
-    console.log(getEnvValue('debug'));
-    console.log(getEnvValue('timeout'));
+    console.log(env.getEnvValue('debug'));
+    console.log(env.getEnvValue('timeout'));
 }
 
 /**

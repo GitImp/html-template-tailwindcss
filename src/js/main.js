@@ -1,5 +1,3 @@
-'use strict';
-
 import { createEnvManager } from './env.min.js';
 import { Bootstrap } from './bootstrap.min.js';
 import { fetchData, apiKey, config_module } from './module.min.js';
